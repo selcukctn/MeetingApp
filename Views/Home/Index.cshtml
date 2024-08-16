@@ -1,4 +1,3 @@
-@model string
 @{
     ViewData["Title"] = "Anasayfa";
 }
@@ -8,4 +7,13 @@
 <!--<h1 class="h4">@Model</h1>-->
 <h1 class="h4">@ViewData["Selam"]</h1>
 <p>Toplantı katılım durumunuzu bildiriniz.</p>
-<a  class="btn btn-sm btn-outline-primary" asp-controller="meeting" asp-action="apply">Başvuru Yap</a>
+
+<div class="card my2">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">@Model.Location</li>
+        <li class="list-group-item">Tarih: @Model.Date.ToString("dd/MM/yyyy HH:mm:ss")</li>
+        <li class="list-group-item">Katılımcı sayısı: @Model.NumberOfPeople</li>
+    </ul>
+</div>
+
+<a  class="btn btn-sm btn-outline-primary" style="margin-top: 10px;" asp-controller="meeting" asp-action="apply">Başvuru Yap</a>
