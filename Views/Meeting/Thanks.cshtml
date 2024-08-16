@@ -1,0 +1,15 @@
+@model UserInfo
+@{
+    ViewData["Title"] = "Toplantı Özeti";
+}
+<h1 class="h4 text-center">Toplantı Özeti</h1>
+
+
+@if(Model.WillAttend == true) {
+    <p>Sayın @Model.Name, toplantıya sizinle birlikte @ViewBag.UserCount kişi katılıyor.</p>
+    <a class="btn btn-sm btn-outline-primary" href="#">Katılımcıları Listele</a>
+} else {
+    <p>@Model.Name, katılmadığınız için üzgünüz.</p>
+    <a class="btn btn-sm btn-outline-primary" asp-controller="Home" asp-action="Index">Anasayfa</a>
+}
+

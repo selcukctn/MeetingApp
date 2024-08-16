@@ -20,7 +20,7 @@ namespace MeetingApp.Controllers
                 Id = 1,
                 Location = "İstanbul, Abc Kongre Merkezi",
                 Date = new DateTime(2024, 01, 20, 20, 0, 0),
-                NumberOfPeople = 100
+                NumberOfPeople = Repository.Users.Where(i=>i.WillAttend==true).Count()
             };
             return View(meetingInfo);
         }
