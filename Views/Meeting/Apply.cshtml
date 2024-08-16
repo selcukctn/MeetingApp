@@ -1,9 +1,26 @@
 @{
     ViewData["Title"] = "Toplantı Kayıt";
 }
-<h4>Toplantı Katılım Formu</h4>
+<h4 class="text-center">Toplantı Katılım Formu</h4>
 <form action="">
-
-
+    <div class="mb-3">
+        <label for="Name" class="form-label">İsim</label>
+        <input type="text" name="Name" id="Name" class="form-control" placeholder="İsim giriniz">
+    </div>
+    <div class="mb-3">
+        <label for="Phone" class="form-label">Telefon</label>
+        <input type="text" name="Phone" id="Phone" class="form-control" placeholder="Telefon giriniz">
+    </div>
+    <div class="mb-3">
+        <label for="Email" class="form-label">Eposta</label>
+        <input type="email" name="Email" id="Email" class="form-control" placeholder="Eposta giriniz">
+    </div>
+    <div class="mb-3">
+        <label for="WillAttend" class="form-label">Katılım Durumu</label>
+        <select name="WillAttend" id="WillAttend" class="form-select">
+            <option value="true">Evet</option>
+            <option value="false">Hayır</option>
+        </select>
+    </div>
     <button class="btn btn-primary" type="submit">Kaydet</button>
 </form>
