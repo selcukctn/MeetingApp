@@ -1,3 +1,7 @@
-<h1>Merhaba</h1>
-<h2>Toplantı katılım durumunuzu bildiriniz.</h2>
-<a href="#">Başvuru Yap</a>
+@{
+    ViewData["Title"] = "Anasayfa";
+}
+
+<h1 class="h4">Merhaba</h1>
+<p>Toplantı katılım durumunuzu bildiriniz.</p>
+<a  class="btn btn-sm btn-outline-primary" asp-controller="meeting" asp-action="apply">Başvuru Yap</a>
