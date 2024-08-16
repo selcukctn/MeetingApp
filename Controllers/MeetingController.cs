@@ -1,3 +1,4 @@
+using MeetingApp.Models;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -17,8 +18,8 @@ namespace MeetingApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Apply(string Name, string Email, string Phone, bool WillAttend){
-            Console.WriteLine(Name,Email,Phone,WillAttend);
+        public IActionResult Apply(UserInfo model){
+            Console.WriteLine(model);
             return View();
         }
         public IActionResult List(){
