@@ -7,6 +7,10 @@ var app = builder.Build();
 
 //app.MapDefaultControllerRoute();
 
+app.UseStaticFiles();
+
+app.UseRouting();
+
 app.MapControllerRoute(
     name:"default",
     pattern:"{controller=Home}/{action=Index}/{id?}"
