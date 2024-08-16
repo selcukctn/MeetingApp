@@ -1,3 +1,4 @@
+@model List<UserInfo>
 @{
     ViewData["Title"] = "Katılımcı Listesi";
 }
@@ -11,15 +12,27 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Harun Çetin</td>
-            <td>Evet</td>
-            <td><a class="btn btn-sm btn-primary" href="#">Detay</a></td>
-        </tr>
-        <tr>
-            <td>Selçuk Çetin</td>
-            <td>Evet</td>
-            <td><a class="btn btn-sm btn-primary" href="#">Detay</a></td>
-        </tr>
+        @{int i = 0;}
+        @foreach (var user in Model)
+        {
+            var status = user.WillAttend == true ? "Evet" : "Hayır";
+            var className = user.WillAttend == true ? "table-success" : "table-danger";
+            if(user.WillAttend == true){
+                i++;    
+            }
+                
+            
+            <tr class="@className">
+                <td>@user.Name</td>
+                <td>@status</td>
+                <td><a class="btn btn-sm btn-primary" href="#">Detay</a></td>
+            </tr>
+        }
     </tbody>
 </table>
+<div class="card text-center">
+    <div class="card-body">
+        <p>Katılımcı Sayısı: @i</p>
+    </div>
+</div>
+    <a class="btn btn-sm btn-outline-primary" style="margin-top: 10px;" asp-controller="Home" asp-action="Index">Anasayfa</a>

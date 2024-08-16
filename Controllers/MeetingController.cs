@@ -21,7 +21,8 @@ namespace MeetingApp.Controllers
             return View("Thanks",model);
         }
         public IActionResult List(){
-            return View();
+            var users = Repository.Users;
+            return View(users);
         }
     }
 }
