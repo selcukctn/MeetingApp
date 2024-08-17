@@ -129,6 +129,10 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap.rtl.min.css.map"
     },
     {
+      "Id": "C:\\Users\\harun\\Desktop\\Project\\aspdotnet\\MeetingApp\\wwwroot\\lib\\bootstrap\\css\\style.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\style.css"
+    },
+    {
       "Id": "C:\\Users\\harun\\Desktop\\Project\\aspdotnet\\MeetingApp\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\js\\bootstrap.bundle.js"
     },
