@@ -1,0 +1,16 @@
+@model UserInfo
+@{
+    ViewData["Title"] = "Başvuru Detayı";
+}
+
+@{
+    var className = @Model.WillAttend == true ? "primary" : "danger";
+    var text = @Model.WillAttend == true ? "Katılıyor" : "Katılmıyor";
+}
+
+<main class="text-center">
+    <h1 class="h4">Başvuru Detayı</h1>
+    <p>İsim: @Model.Name</p>
+    <p>Email: @Model.Email</p>
+    <p>Telefon: @Model.Phone</p>
+</main>

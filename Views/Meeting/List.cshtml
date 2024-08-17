@@ -12,20 +12,24 @@
         </tr>
     </thead>
     <tbody>
-        @{int i = 0;}
+        @{
+            int i = 0;
+        }
         @foreach (var user in Model)
         {
             var status = user.WillAttend == true ? "Evet" : "Hayır";
             var className = user.WillAttend == true ? "table-success" : "table-danger";
-            if(user.WillAttend == true){
-                i++;    
+            if (user.WillAttend == true)
+            {
+                i++;
             }
-                
-            
+
+
             <tr class="@className">
                 <td>@user.Name</td>
                 <td>@status</td>
-                <td><a class="btn btn-sm btn-primary" href="#">Detay</a></td>
+                <td><a class="btn btn-sm btn-primary" asp-controller="Meeting" asp-action="Details"
+                        asp-route-id="@user.Id">Detay</a></td>
             </tr>
         }
     </tbody>
@@ -35,4 +39,5 @@
         <p>Katılımcı Sayısı: @i</p>
     </div>
 </div>
-    <a class="btn btn-sm btn-outline-primary" style="margin-top: 10px;" asp-controller="Home" asp-action="Index">Anasayfa</a>
+<a class="btn btn-sm btn-outline-primary" style="margin-top: 10px;" asp-controller="Home"
+    asp-action="Index">Anasayfa</a>
